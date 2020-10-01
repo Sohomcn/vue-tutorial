@@ -3,19 +3,22 @@
     <head>
         <meta charset="utf-8">
         <title>VueJS Tutorials</title>
-        <link href="styles.css" rel="stylesheet" />
+        <link href="style.css" rel="stylesheet" />
         <script src="https://unpkg.com/vue"></script>
     </head>
     <body>
         <div id="vue-app">
-            <h1>Data Binding</h1>
+            <h1>Events</h1>
 
-            <a v-bind:href=website>Link1</a>
+            <button @click="add(1)">Add a year</button>
+            <button v-on:click="subtract(1)">Subtract a year</button>
 
-            <input type="text" v-bind:value=name />
+            <button v-on:dblclick="add(10)">Add 10 years</button>
+            <button v-on:dblclick="subtract(10)">Subtract 10 years</button>
 
-            <p v-html="websiteTag"></p>
+            <p>My age is : {{age}}</p>
 
+            <div id="canvas" v-on:mousemove="updateXY">{{x}},{{y}}</div>
         </div>
     </body>
 
