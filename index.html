@@ -8,13 +8,13 @@
     </head>
     <body>
         <div id="vue-app">
-            <h1>Keyboard Events</h1>
+            <h1>Two Way Data Binding</h1>
 
-            <!-- https://vuejs.org/v2/guide/events.html#Key-Modifiers -->
-
-            <!-- example of key modifier -->
-            <input type="text" v-on:keyup.enter="logName" />
-            <input type="text" v-on:keyup.alt.enter="logAge" />
+            Name : <input type="text" v-model="name">
+            <span>{{ name }}</span>
+            <br><br>
+            Age : <input type="text" v-model="age">
+            <span>{{ age }}</span>
             
         </div>
     </body>
