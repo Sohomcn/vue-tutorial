@@ -1,18 +1,14 @@
 new Vue({
 	el: '#vue-app',
 	data: {
-		age : 27,
-		website: 'https://example.com',
+
 	},
 	methods: {
-		add: function(inc){
-			this.age += inc;
+		logName: function(){
+			console.log('Name entered');
 		},
-		subtract: function(dec){
-			this.age -= dec;
-		},
-		click: function(){
-			alert('Click Triggered');
+		logAge: function(){
+			console.log('Age entered');
 		}
 	}
 });
