@@ -8,16 +8,31 @@
     </head>
     <body>
         <div id="vue-app">
-            <h1>Conditionals</h1>
+            <h1>Looping</h1>
 
-            <button v-on:click="success = !success">Toggle Success</button>
-            <button v-on:click="error = !error">Toggle Error</button>
+            <ul>
+                <li v-for="character in characters">{{ character }}</li>
+            </ul>
 
-            <!-- <p v-if="error">There has been an error</p>
-            <p v-else-if="success">Success</p> -->
+             -------------------------------------------
 
-            <p v-show="error">There has been an error</p>
-            <p v-show="success">Success</p>
+            <ul>
+                <li v-for="(data, index) in datas">{{ index }} . {{ data.name }} - {{ data.age }}</li>
+            </ul>
+             -------------------------------------------
+
+            <template v-for="(data, index) in datas">
+                <h3>{{ index }} . {{ data.name }}</h3>
+                <p>{{ data.age }}</p>
+            </template>
+
+            -------------------------------------------
+
+            <template v-for="(data, index) in datas">
+                <div v-for="(val, key) in data">
+                    <p>{{ key }} , {{ val }}</p>
+                </div>
+            </template>
 
         </div>
     </body>
